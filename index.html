@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Who Ami</title>
+</head>
+<body>
+  <div class="container">
+    <div class="svg hide" id="svg"></div>
+    <h1>Abdel Aziz Mfossa</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nobis ipsa id cum pariatur a fugiat qui!</p>
+    <button>Me contacter</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js" integrity="sha512-BB7rb8ZBAxtdJdB7nwDijJH9NC+648xSzviK9Itm+5APTtdpgKz1+82bDl4znz/FBhd0R7pJ/gQtomnMpZYzRw==" crossorigin="anonymous"></script>
+
+  <script>
+    const play = document.querySelector('button')
+    const svgContainer = document.getElementById('svg')
+    const animItem = bodymovin.loadAnimation({
+      wrapper: svgContainer,
+      animType: 'svg',
+      loop: false,
+      autoplay: false,
+      path: 'https://assets6.lottiefiles.com/packages/lf20_u4yrau.json'
+    })
+    
+    play.addEventListener('click', () => {
+      svgContainer.classList.remove('hide')
+      animItem.goToAndPlay(0, true)
+    })
+
+    animItem.addEventListener('complete', () => {
+      svgContainer.classList.add('hide')
+    })
+  </script>
+
+</body>
+</html>
