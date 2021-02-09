@@ -4,20 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
-  <title>Who Ami</title>
+  <title>Who Ami, Abdel Mfossa</title>
 </head>
 <body>
   <div class="container">
     <div class="svg hide" id="svg"></div>
     <h1>Abdel Aziz Mfossa</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nobis ipsa id cum pariatur a fugiat qui!</p>
+    <p>I'Am Abdel Aziz Mfossa, Developer Student Club Lead at Google Developer, and University of Yaounde I !!!</p>
     <button>Me contacter</button>
+  </div>
+  <div class="contact hide" id="contact">
+    Twitter: <a href="https://twitter.com/AbdelMfossa" target="_blank">Twitter</a> 
+    LinkedIn: <a href="https://linkedin.com/in/AbdelMfossa" target="_blank">LinkedIn</a>
+    GitHub: <a href="https://github.com/AbdelMfossa" target="_blank">GitHub</a>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js" integrity="sha512-BB7rb8ZBAxtdJdB7nwDijJH9NC+648xSzviK9Itm+5APTtdpgKz1+82bDl4znz/FBhd0R7pJ/gQtomnMpZYzRw==" crossorigin="anonymous"></script>
 
   <script>
     const play = document.querySelector('button')
     const svgContainer = document.getElementById('svg')
+    const contactZone = document.getElementById('contact')
     const animItem = bodymovin.loadAnimation({
       wrapper: svgContainer,
       animType: 'svg',
@@ -29,10 +35,12 @@
     play.addEventListener('click', () => {
       svgContainer.classList.remove('hide')
       animItem.goToAndPlay(0, true)
+      contactZone.classList.remove('hide')
     })
 
     animItem.addEventListener('complete', () => {
       svgContainer.classList.add('hide')
+      contactZone.classList.add('hide')
     })
   </script>
 

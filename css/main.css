@@ -57,4 +57,13 @@ button:hover {
 .hide {
   display: none;
 }
+
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  text-decoration: none;
+  color: green;
+}
 /*# sourceMappingURL=main.css.map */
